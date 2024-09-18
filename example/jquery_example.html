@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexiSplit jQuery Example</title>
+    <link rel="stylesheet" href="../css/flexisplit.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Split.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/split.js/dist/split.min.js"></script>
+</head>
+<body>
+
+<div id="container" style="height: 500px;">
+    <div id="panel1" style="background-color: lightblue;">Panel 1</div>
+    <div id="panel2" style="background-color: lightgreen;">Panel 2</div>
+</div>
+
+<script src="../src/index.js"></script>
+<script>
+    $(document).ready(function() {
+        const splitter = new FlexiSplit($('#panel1')[0], $('#panel2')[0], {
+            direction: 'horizontal',
+            percentage1: 70,
+            percentage2: 30,
+            gutterSize: 10,
+            minSize1: 100,
+            minSize2: 100,
+            collapseButtonVisible: true
+        });
+    });
+</script>
+
+</body>
+</html>
