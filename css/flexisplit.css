@@ -1,0 +1,66 @@
+/* Container styles */
+.vertical-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.horizontal-container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
+
+/* Panel styles */
+.splitter-panel {
+    overflow: auto;
+    box-sizing: border-box;
+    flex-grow: 1;
+}
+
+/* Gutter styles */
+.gutter {
+    background-color: #ccc;
+    position: relative;
+    z-index: 1;
+}
+
+.gutter-vertical {
+    cursor: ns-resize;
+    height: 10px;
+    width: 100%;
+}
+
+.gutter-horizontal {
+    cursor: ew-resize;
+    width: 10px;
+    height: 100%;
+}
+
+/* Collapse button styling */
+.gutter-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    padding: 5px 10px;
+    background-color: #008cba;
+    color: white;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gutter-button:hover {
+    background-color: #005f8b;
+}
+
+.gutter-disabled {
+    cursor: not-allowed !important;
+}
