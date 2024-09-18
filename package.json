@@ -1,0 +1,21 @@
+{
+    "name": "flexisplit",
+    "version": "1.0.0",
+    "main": "src/index.js",
+    "style": "css/flexisplit.css",
+    "scripts": {
+      "build": "webpack",
+      "prepublishOnly": "npm run build"
+    },
+    "keywords": [
+      "splitter",
+      "flexible",
+      "panels",
+      "javascript",
+      "plugin"
+    ],
+    "dependencies": {
+      "split.js": "^1.6.0"
+    }
+  }
+  
