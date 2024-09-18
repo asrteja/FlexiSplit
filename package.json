@@ -4,18 +4,51 @@
     "main": "src/index.js",
     "style": "css/flexisplit.css",
     "scripts": {
-      "build": "webpack",
-      "prepublishOnly": "npm run build"
+        "build": "webpack",
+        "prepublishOnly": "npm run build"
     },
     "keywords": [
-      "splitter",
-      "flexible",
-      "panels",
-      "javascript",
-      "plugin"
+        "splitter",
+        "flexible",
+        "panels",
+        "javascript",
+        "plugin",
+        "resizable",
+        "collapsible",
+        "drag",
+        "split",
+        "drag-to-resize",
+        "layout",
+        "gutter",
+        "split-pane",
+        "split-panel",
+        "flex-layout",
+        "web-component",
+        "ui-component",
+        "jquery",
+        "react",
+        "angular",
+        "vue",
+        "resize-pane",
+        "custom-layout",
+        "vertical-splitter",
+        "horizontal-splitter",
+        "pane-resize",
+        "panel-resize",
+        "flex-splitter",
+        "UI"
     ],
     "dependencies": {
-      "split.js": "^1.6.0"
+        "split.js": "^1.6.0"
+    },
+    "author": "asrteja",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/asrteja/flexisplit.git"
+    },
+    "devDependencies": {
+        "webpack": "^5.94.0",
+        "webpack-cli": "^5.1.4"
     }
-  }
-  
+}
