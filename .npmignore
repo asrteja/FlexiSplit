@@ -1,0 +1,11 @@
+
+# Ignore unnecessary files for npm package
+node_modules/
+tests/
+logs/
+example/
+*.log
+*.tmp
+*.lock
+README.md  # Include only if you don't want this in npm (but usually, you keep it)
+.gitignore  # Not necessary for npm
