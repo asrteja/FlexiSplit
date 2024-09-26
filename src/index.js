@@ -16,6 +16,8 @@
             this.isCollapsed = false;
             this.gutter = null;
             this.collapseButton = null;
+			this.button = document.createElement('button');
+			
 
             // Merge options with defaults
             this.options = Object.assign({
@@ -79,17 +81,18 @@
         }
 
         createGutterButton() {
-            const button = document.createElement('button');
-            button.className = 'gutter-button';
-            button.textContent = this.options.direction === 'vertical' ? 'Collapse' : 'Collapse';
+            this.button.className = 'gutter-button';
+			const arrow_dir = this.options.direction === 'vertical' ? 'fs-arrow-down' : 'fs-arrow-left';
+			this.button.classList.remove("fs-arrow-up", "fs-arrow-down", "fs-arrow-left", "fs-arrow-right");
+			this.button.classList.add(arrow_dir);
+			this.button.innerHTML = '<i title="Collapse" class="fs-arrow ' + arrow_dir + '"></i>';
 
-            button.addEventListener('click', () => {
+            this.button.addEventListener('click', () => {
                 this.toggleCollapse();
-                button.textContent = this.isCollapsed ? 'Expand' : 'Collapse';
             });
 
-            this.gutter.appendChild(button);
-            this.collapseButton = button;
+            this.gutter.appendChild(this.button);
+            this.collapseButton = this.button;
         }
 
         collapsePanel() {
@@ -103,6 +106,10 @@
 
             this.gutter.classList.add('gutter-disabled');
             this.isCollapsed = true;
+			const arrow_dir = this.options.direction === 'vertical' ? 'fs-arrow-up' : 'fs-arrow-right';
+			this.button.classList.remove("fs-arrow-up", "fs-arrow-down", "fs-arrow-left", "fs-arrow-right");
+			this.button.classList.add(arrow_dir);
+			this.button.innerHTML = '<i title="Expand" class="fs-arrow ' + arrow_dir + '"></i>';
         }
 
         expandPanel() {
@@ -113,6 +120,10 @@
 
             this.gutter.classList.remove('gutter-disabled');
             this.isCollapsed = false;
+			const arrow_dir = this.options.direction === 'vertical' ? 'fs-arrow-down' : 'fs-arrow-left';
+			this.button.classList.remove("fs-arrow-up", "fs-arrow-down", "fs-arrow-left", "fs-arrow-right");
+			this.button.classList.add(arrow_dir);
+			this.button.innerHTML = '<i title="Collapse" class="fs-arrow ' + arrow_dir + '"></i>';
         }
 
         toggleCollapse() {
