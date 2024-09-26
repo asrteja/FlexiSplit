@@ -19,15 +19,17 @@
 
 <script src="../src/index.js"></script>
 <script>
+let splitter;
     $(document).ready(function() {
-        const splitter = new FlexiSplit($('#panel1')[0], $('#panel2')[0], {
+        splitter = new FlexiSplit($('#panel1')[0], $('#panel2')[0], {
             direction: 'horizontal',
             percentage1: 70,
             percentage2: 30,
-            gutterSize: 10,
+            gutterSize: 5,
             minSize1: 100,
             minSize2: 100,
-            collapseButtonVisible: true
+            collapseButtonVisible: true,
+			initiallyCollapsed: false
         });
     });
 </script>
