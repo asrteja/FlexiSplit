@@ -1,6 +1,6 @@
 {
     "name": "flexisplit",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "main": "src/index.js",
     "style": "css/flexisplit.css",
     "scripts": {
@@ -39,6 +39,7 @@
         "UI"
     ],
     "dependencies": {
+        "flexisplit": "file:flexisplit-1.0.1.tgz",
         "split.js": "^1.6.0"
     },
     "author": "asrteja",
