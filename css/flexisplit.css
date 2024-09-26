@@ -46,15 +46,20 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 10;
-    padding: 5px 10px;
-    background-color: #008cba;
+    /* padding: 3px 20px; */
+    background-color: #0e2c63;
     color: white;
     border: none;
     cursor: pointer;
     outline: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    /* font-size: 0px; */
+	padding: 2px 6px 3px 6px;
+    border-radius: 15px;
+}
+
+/* Horizontal gutter */
+.gutter-horizontal .gutter-button {
+    /* padding: 20px 3px; */
 }
 
 .gutter-button:hover {
@@ -63,4 +68,46 @@
 
 .gutter-disabled {
     cursor: not-allowed !important;
+}
+
+i.fs-arrow {
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+i.fs-arrow-right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+i.fs-arrow-left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+i.fs-arrow-up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+i.fs-arrow-down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+.gutter-button.fs-arrow-right {
+  padding: 2px 7px 3px 4px;
+}
+
+.gutter-button.fs-arrow-left {
+  padding: 2px 4px 3px 7px;
+}
+
+.gutter-button.fs-arrow-up {
+  padding: 4px 6px 1px 6px;
+}
+
+.gutter-button.fs-arrow-down {
+  padding: 1px 6px 4px 6px;
 }
