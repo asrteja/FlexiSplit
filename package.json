@@ -1,11 +1,11 @@
 {
     "name": "flexisplit",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "main": "src/index.js",
     "style": "css/flexisplit.css",
     "scripts": {
-        "build": "webpack",
-        "prepublishOnly": "npm run build"
+        "build": "webpack --mode production",
+        "start": "webpack serve --mode development"
     },
     "keywords": [
         "splitter",
@@ -39,7 +39,6 @@
         "UI"
     ],
     "dependencies": {
-        "flexisplit": "file:flexisplit-1.0.1.tgz",
         "split.js": "^1.6.0"
     },
     "author": "asrteja",
