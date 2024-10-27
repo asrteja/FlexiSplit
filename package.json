@@ -1,11 +1,11 @@
 {
     "name": "flexisplit",
-    "version": "1.0.2",
+    "version": "1.0.1",
     "main": "src/index.js",
     "style": "css/flexisplit.css",
     "scripts": {
-        "build": "webpack --mode production",
-        "start": "webpack serve --mode development"
+        "build": "webpack",
+        "prepublishOnly": "npm run build"
     },
     "keywords": [
         "splitter",
